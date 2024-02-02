@@ -8,8 +8,9 @@ function volume_sphere() {
             // Parse the value from the input as a number
             let radius = parseFloat(input.value);
 	    if (isNaN(radius)) {
-                alert("NaN");
-                return false;
+                 volumeInput.value = 'NaN';
+        alert("Please enter a valid number for the radius.");
+        return false;
             }
 	  // Calculate the volume of the sphere using the formula: V = (4/3) * π * r^3
             let volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
